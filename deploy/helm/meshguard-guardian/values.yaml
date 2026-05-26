@@ -1,0 +1,14 @@
+image:
+  repository: ghcr.io/meshguard/guardian
+  tag: 0.1.0
+
+meshguard:
+  gatewayUrl: https://gateway.meshguard.app
+  tenantId: ""
+  policyCacheTtl: 1h
+  disconnectedMaxAge: 24h
+
+audit:
+  walPath: /var/lib/meshguard/audit.wal
+  replayOnReconnect: true
+
