@@ -1,0 +1,17 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "meshguard-guardian"
+version = "0.1.0"
+description = "MeshGuard guardian sidecar runtime"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "Apache-2.0"
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[tool.ruff]
+line-length = 100

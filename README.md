@@ -9,9 +9,17 @@ OSS sidecar for local policy enforcement, streaming inspection, disconnected aud
 - Standalone VM binary.
 - Air-gapped bundle component.
 
-## Current Scaffold
+## Runtime Components
 
 - Helm chart directory.
-- Policy cache and WAL interfaces to be implemented.
+- Last-known-good policy cache for disconnected operation.
+- Deterministic local policy evaluator for sidecar fallback.
+- Durable JSONL audit WAL with replay-and-truncate semantics.
 - Streaming inspection protocol matrix tracked in the MeshGuard PRD.
 
+## Development
+
+```bash
+python3 -m pytest -q
+python3 -m compileall -q meshguard_guardian
+```
